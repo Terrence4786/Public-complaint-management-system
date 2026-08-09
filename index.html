@@ -3,13 +3,62 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>System Test</title>
+    <title>Uconnect | Public Complaint Management System</title>
   </head>
   <body>
-    <h1>System Test</h1>
-    <p>The frontend local connection is working.</p>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+      <div class="logo">Uconnect</div>
+      <nav>
+        <button id="nav-file" type="button" class="nav-btn active">Log an Issue</button>
+        <button id="nav-view" type="button" class="nav-btn">Student Dashboard</button>
+      </nav>
+    </header>
+
+    <!-- Content Workspace -->
+    <main id="app-content">
+      <section class="form-container">
+        <h2>Submit a Formal Student Complaint</h2>
+        <p class="subtitle">Please fill out all required fields to register an official ticket with campus administration.</p>
+
+        <form id="complaint-form">
+          <!-- Student Full Name -->
+          <div class="form-group">
+            <label for="student-name">Student Full Name</label>
+            <input type="text" id="student-name" placeholder="Enter your full name" required >
+          </div>
+
+          <!-- Student ID Number -->
+          <div class="form-group">
+            <label for="student-id">Student Number / ID</label>
+            <input type="text" id="student-id" placeholder="Enter your student number" required >
+          </div>
+
+          <!-- Student Category Selection -->
+          <div class="form-group">
+            <label for="complaint-category">Issue Category</label>
+            <select id="complaint-category" required>
+              <option value="" disabled selected>Select a campus department...</option>
+             <option value="academics">Academics &amp; Grading Disputes</option>
+              <option value="housing">Campus Residence &amp; Housing</option>
+              <option value="finance">Financial Aid &amp; Tuition Fees</option>
+              <option value="facilities">Campus Facilities &amp; WiFi Infrastructure</option>
+            </select>
+          </div>
+
+          <!-- Detailed Description -->
+          <div class="form-group">
+            <label for="complaint-details">Detailed Description</label>
+            <textarea id="complaint-details" rows="5" placeholder="Provide clear specific details about your grievance..." required></textarea>
+          </div>
+
+          <!-- Action Button -->
+          <button type="submit" class="submit-btn">Submit Official Grievance</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
-
-
-
